@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f2f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.main-container {
+    background: #ffffff;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.circuit-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 36px;
+    color: #003366;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.instructions {
+    font-size: 18px;
+    color: #00509E;
+    margin-bottom: 30px;
+    font-style: italic;
+    max-width: 500px;
+}
+
+.visual {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+.lightbulb-img {
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.electric-spark {
+    position: absolute;
+    width: 150px;
+    height: 10px;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #ffef00, #ff6600);
+    animation: sparkAnimation 1s infinite alternate;
+}
+
+@keyframes sparkAnimation {
+    0% {
+        transform: scaleX(1) scaleY(1) translateX(-50%);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scaleX(1.5) scaleY(1.5) translateX(-50%);
+        opacity: 0.3;
+    }
+}
